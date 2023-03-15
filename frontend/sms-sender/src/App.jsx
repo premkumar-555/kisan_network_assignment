@@ -9,8 +9,8 @@ function App() {
       <NavBar />
       <Box
         sx={{ position: "relative", top: "100px" }}
-        w="100%"
-        px="4rem"
+        w="90%"
+        mx="auto"
         maxH="100%"
         border="1px solid red"
       >
