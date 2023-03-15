@@ -27,7 +27,7 @@ router.get("/search", async (req, res) => {
     return res.status(500).send(error);
   }
 });
-
+// creating contacts
 router.post("/", async (req, res) => {
   try {
     let result = await contactsModel.create({

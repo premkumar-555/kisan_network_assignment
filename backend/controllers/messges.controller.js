@@ -3,15 +3,16 @@ const router = express.Router();
 const messagesModel = require("../Models/messages.model");
 const msgSender = require("../middlewares/msgSender");
 
+// get all messges
 router.get("/", async (req, res) => {
   try {
-    let result = await messagesModel.find();
+    let result = await messagesModel.find().populate("contact");
     return res.status(200).send(result);
   } catch (error) {
     return res.status(500).send(error);
   }
 });
-
+// send message and save in db also
 router.post("/", msgSender, async (req, res) => {
   try {
     const { contact, OTP } = req?.body;
