@@ -1,0 +1,8 @@
+.pointer {
+  transition: all 0.3s ease !important;
+}
+.pointer:hover {
+  cursor: pointer;
+  text-decoration: 1px solid white !important;
+  text-underline-offset: 3px !important;
+}

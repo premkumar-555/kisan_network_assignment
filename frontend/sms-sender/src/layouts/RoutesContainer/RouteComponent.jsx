@@ -9,7 +9,10 @@ import { Box } from "@chakra-ui/react";
 const RouteComponent = () => {
   return (
     <Routes>
-      <Route path="/" element={Contacts} />
+      <Route path="/" element={<Contacts />} />
+      <Route path="messages" element={<Messages />} />
+      <Route path="contact-info" element={<ContactInfo />} />
+      <Route path="new-message" element={<NewMessage />} />
     </Routes>
   );
 };
