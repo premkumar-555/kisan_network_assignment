@@ -12,7 +12,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 import "./style.css";
-const ContactList = () => {
+const MessagesList = () => {
   return (
     <TableContainer
       border="1px solid lightgrey"
@@ -20,10 +20,10 @@ const ContactList = () => {
       p="1rem"
       py="0"
       pr="1rem"
-      id="style-7"
-      h="425px"
-      overflowY="scroll"
       mx="auto"
+      id="style-7"
+      h="400px"
+      overflowY="scroll"
       position="relative"
       w={["100%", "95%", "75%"]}
     >
@@ -31,31 +31,33 @@ const ContactList = () => {
         <Thead>
           <Tr>
             <Th
-              textAlign="center"
-              className="tRow"
-              textTransform="capitalize"
-              fontSize={["sm", "md", "md"]}
-            >
-              Serial No.
-            </Th>
-            <Th
-              textAlign="center"
               className="tRow"
               textTransform="capitalize"
               fontSize={["sm", "md", "md"]}
             >
               Contact Name
             </Th>
+            <Th
+              className="tRow"
+              textTransform="capitalize"
+              fontSize={["sm", "md", "md"]}
+            >
+              Time Of SMS
+            </Th>
+            <Th
+              className="tRow"
+              textTransform="capitalize"
+              fontSize={["sm", "md", "md"]}
+            >
+              OTP Sent
+            </Th>
           </Tr>
         </Thead>
         <Tbody className="tBody">
           <Tr fontSize={["sm", "md"]} textTransform="capitalize">
-            <Td textAlign="center" className="tRow tdLeft">
-              Serial No.
-            </Td>
-            <Td textAlign="center" className="tRow tdRight">
-              millimetres (mm)
-            </Td>
+            <Td className="tRow tdLeft">millimetres (mm)</Td>
+            <Td className="tRow ">millimetres (mm)</Td>
+            <Td className="tRow tdRight">millimetres (mm)</Td>
           </Tr>
         </Tbody>
       </Table>
@@ -63,4 +65,4 @@ const ContactList = () => {
   );
 };
 
-export default ContactList;
+export default MessagesList;

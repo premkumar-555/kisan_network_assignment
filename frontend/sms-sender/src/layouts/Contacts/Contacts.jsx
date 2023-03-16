@@ -4,7 +4,7 @@ import ContactList from "./components/ContactList";
 const Contacts = () => {
   return (
     <>
-      <Header />
+      <Header text={"Contacts-List"} />
       <ContactList />
     </>
   );

@@ -7,7 +7,7 @@ import {
   InputGroup,
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
-const Header = () => {
+const Header = ({ text }) => {
   return (
     <Box
       w={["100%", "95%", "75%"]}
@@ -18,7 +18,7 @@ const Header = () => {
       alignItems="center"
     >
       <Text fontWeight="500" fontSize={["md", "lg"]}>
-        Contacts-List
+        {text}
       </Text>
       <InputGroup w={["50%", "35%", "30%"]}>
         <InputLeftElement

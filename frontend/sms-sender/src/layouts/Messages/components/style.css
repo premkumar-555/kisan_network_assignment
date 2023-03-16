@@ -1,6 +1,6 @@
 table {
   border-collapse: separate !important;
-  border-spacing: 0 5px !important;
+  border-spacing: 0 3px !important;
 }
 .tRow {
   border-bottom: none !important;
@@ -18,14 +18,14 @@ table tbody {
 }
 #style-7::-webkit-scrollbar-track {
   -webkit-box-shadow: none;
-  background-color: #f5f5f5;
+  background-color: transparent;
   border-radius: 10px;
 }
 
 #style-7::-webkit-scrollbar {
   width: 5px;
   height: 10px;
-  background-color: #f5f5f5;
+  background-color: transparent;
 }
 
 #style-7::-webkit-scrollbar-thumb {

@@ -28,7 +28,7 @@ const NavBar = () => {
     >
       {" "}
       <Box
-        w="90%"
+        w={["90%", "85%", "90%"]}
         mx="auto"
         display="flex"
         justifyContent="space-between"
