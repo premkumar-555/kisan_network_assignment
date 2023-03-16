@@ -34,7 +34,13 @@ const ContactList = () => {
           </Tr>
         </Tbody>
       </Table>
-      <TableContainer h="425px" overflowY="scroll" position="relative" w="100%">
+      <TableContainer
+        id="style-7"
+        h="425px"
+        overflowY="scroll"
+        position="relative"
+        w="100%"
+      >
         <Table variant="striped" colorScheme="orange">
           <Tbody className="tBody">
             <Tr fontSize={["sm", "md"]} textTransform="capitalize">
