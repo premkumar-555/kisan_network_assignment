@@ -3,10 +3,13 @@ const router = express.Router();
 const messagesModel = require("../Models/messages.model");
 const msgSender = require("../middlewares/msgSender");
 
-// get all messges
+// get all messges in descending order
 router.get("/", async (req, res) => {
   try {
-    let result = await messagesModel.find().populate("contact");
+    let result = await messagesModel
+      .find()
+      .populate("contact")
+      .sort({ created_at: -1 });
     return res.status(200).send(result);
   } catch (error) {
     return res.status(500).send(error);
