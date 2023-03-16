@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import {
   Table,
   Thead,
@@ -11,8 +11,30 @@ import {
   TableContainer,
   Box,
 } from "@chakra-ui/react";
+import { selectUser } from "../../../Redux/contact-info/actions.js";
+import { v4 as uuid } from "uuid";
+import { useNavigate } from "react-router-dom";
 import "./style.css";
+import axios from "axios";
+import { useDispatch } from "react-redux";
 const ContactList = () => {
+  const [contacts, setContacts] = useState([]);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const getContacts = async () => {
+    try {
+      let result = await axios.get(
+        `${import.meta.env.VITE_REACT_API}/contacts`
+      );
+      result?.data?.length && setContacts([...result?.data]);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    getContacts();
+  }, []);
+
   return (
     <TableContainer
       border="1px solid lightgrey"
@@ -49,14 +71,26 @@ const ContactList = () => {
           </Tr>
         </Thead>
         <Tbody className="tBody">
-          <Tr fontSize={["sm", "md"]} textTransform="capitalize">
-            <Td textAlign="center" className="tRow tdLeft">
-              Serial No.
-            </Td>
-            <Td textAlign="center" className="tRow tdRight">
-              millimetres (mm)
-            </Td>
-          </Tr>
+          {contacts.length >= 1 &&
+            contacts.map((ele, ind) => (
+              <Tr
+                sx={{ "&:hover": { cursor: "pointer" } }}
+                onClick={() => {
+                  dispatch(selectUser(ele));
+                  navigate(`contact-info/${ele?._id}`);
+                }}
+                key={uuid()}
+                fontSize={["sm", "md"]}
+                textTransform="capitalize"
+              >
+                <Td textAlign="center" className="tRow tdLeft">
+                  {ind + 1}
+                </Td>
+                <Td textAlign="center" className="tRow tdRight">
+                  {`${ele?.first_name} ${ele?.last_name}`}
+                </Td>
+              </Tr>
+            ))}
         </Tbody>
       </Table>
     </TableContainer>

@@ -11,7 +11,7 @@ const RouteComponent = () => {
     <Routes>
       <Route path="/" element={<Contacts />} />
       <Route path="messages" element={<Messages />} />
-      <Route path="contact-info" element={<ContactInfo />} />
+      <Route path="contact-info/:id" element={<ContactInfo />} />
       <Route path="new-message" element={<NewMessage />} />
     </Routes>
   );
