@@ -49,7 +49,6 @@ const NewMessage = () => {
       setOTP(res);
       settext(`Hi your OTP is : ${res}`);
     }
-    console.log("res ", OTP);
   };
   useEffect(() => {
     generateOtp();

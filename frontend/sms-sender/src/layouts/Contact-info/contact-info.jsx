@@ -5,7 +5,6 @@ import { Link, useLocation } from "react-router-dom";
 const ContactInfo = () => {
   const { selectedContact } = useSelector((state) => state);
   const { state } = useLocation();
-  console.log(selectedContact);
   return (
     <Box
       boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
