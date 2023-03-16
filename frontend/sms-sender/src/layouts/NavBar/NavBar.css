@@ -1,5 +1,5 @@
 .pointer {
-  transition: all 0.3s ease !important;
+  transition: all 0.3s ease-in-out !important;
 }
 .pointer:hover {
   cursor: pointer;

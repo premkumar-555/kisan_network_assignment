@@ -25,34 +25,39 @@ const NavBar = () => {
       bg="#FF6F00"
       color="white"
       py="1rem"
-      px={["2rem", "3rem", "4rem"]}
-      display="flex"
-      justifyContent="space-between"
-      alignItems="center"
     >
-      <Box>
-        <Text
-          textDecoration="underline"
-          textUnderlineOffset="3px"
-          fontWeight="500"
-          fontSize={["lg", "xl", "2xl"]}
-        >
-          <Link to="/">SMS-Sender</Link>
-        </Text>
-      </Box>
+      {" "}
       <Box
-        h="100%"
-        w={["50%", "32%", "21%"]}
+        w="90%"
+        mx="auto"
         display="flex"
         justifyContent="space-between"
         alignItems="center"
       >
-        <Text sx={hoverEffs} fontWeight="500" fontSize={["md", "lg", "xl"]}>
-          <Link to="/">Contacts</Link>
-        </Text>
-        <Text sx={hoverEffs} fontWeight="500" fontSize={["md", "lg", "xl"]}>
-          <Link to="messages">Messages</Link>
-        </Text>
+        <Box>
+          <Text
+            textDecoration="underline"
+            textUnderlineOffset="3px"
+            fontWeight="500"
+            fontSize={["lg", "xl", "2xl"]}
+          >
+            <Link to="/">SMS-Sender</Link>
+          </Text>
+        </Box>
+        <Box
+          h="100%"
+          w={["50%", "32%", "21%"]}
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+        >
+          <Text sx={hoverEffs} fontWeight="500" fontSize={["md", "lg", "xl"]}>
+            <Link to="/">Contacts</Link>
+          </Text>
+          <Text sx={hoverEffs} fontWeight="500" fontSize={["md", "lg", "xl"]}>
+            <Link to="messages">Messages</Link>
+          </Text>
+        </Box>
       </Box>
     </Box>
   );

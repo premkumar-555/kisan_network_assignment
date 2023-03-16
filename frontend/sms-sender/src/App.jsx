@@ -12,7 +12,7 @@ function App() {
         w="90%"
         mx="auto"
         maxH="100%"
-        border="1px solid red"
+        border="1px solid none"
       >
         <RouteComponent />
       </Box>
