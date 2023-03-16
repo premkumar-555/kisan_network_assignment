@@ -39,3 +39,13 @@ table tbody {
     color-stop(0.86, rgb(28, 58, 148))
   );
 }
+
+#style-7::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+  /* margin-bottom: 10px; */
+}
+
+#style-7::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+  /* margin-top: 10px; */
+}

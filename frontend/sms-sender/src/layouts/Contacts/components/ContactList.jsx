@@ -28,15 +28,16 @@ const ContactList = () => {
               Sl. No
             </Td>
             <Td fontWeight="500" textAlign="center" className="tRow tdRight">
-              &nbsp;&nbsp;&nbsp;Name
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </Td>
           </Tr>
         </Tbody>
       </Table>
       <TableContainer
+        pr="1rem"
         id="style-7"
-        h="425px"
+        h="400px"
         overflowY="scroll"
         position="relative"
         w="100%"
