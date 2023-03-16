@@ -73,12 +73,12 @@ const ContactInfo = () => {
           &nbsp; {`${state?.phone_number}`}
         </Text>
       </Box>
-      <Button borderRadius="lg" colorScheme="orange" size={["md", "md"]}>
-        <Link to={"/new-message/"} state={state}>
+      <Link to={"/new-message/"} state={state}>
+        <Button borderRadius="lg" colorScheme="orange" size={["md", "lg"]}>
           {" "}
           Send Message
-        </Link>
-      </Button>
+        </Button>
+      </Link>
     </Box>
   );
 };
