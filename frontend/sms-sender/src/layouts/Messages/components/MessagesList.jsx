@@ -49,7 +49,7 @@ const MessagesList = () => {
   return (
     <Box>
       {loading ? (
-        <Stack w="80%">
+        <Stack mx="auto" w="80%">
           <Skeleton height="20px" />
           <Skeleton height="20px" />
           <Skeleton height="20px" />
