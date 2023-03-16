@@ -10,15 +10,17 @@ import { SearchIcon } from "@chakra-ui/icons";
 const Header = () => {
   return (
     <Box
-      w="100%"
+      w={["100%", "85%", "75%"]}
+      mb="15px"
+      mx="auto"
       display="flex"
       justifyContent="space-between"
       alignItems="center"
     >
-      <Text fontWeight="500" fontSize="lg">
+      <Text fontWeight="500" fontSize={["md", "lg"]}>
         Contacts-List
       </Text>
-      <InputGroup w="25%">
+      <InputGroup w={["50%", "35%", "30%"]}>
         <InputLeftElement
           pointerEvents="none"
           children={<SearchIcon color="gray.500" />}
@@ -31,6 +33,7 @@ const Header = () => {
               border: "1px solid lightgrey",
             },
           }}
+          fontSize={["sm", "md"]}
           fontWeight="450"
           type="tel"
           placeholder="Search Contact"
