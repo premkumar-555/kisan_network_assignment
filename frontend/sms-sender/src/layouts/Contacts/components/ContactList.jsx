@@ -18,7 +18,7 @@ const ContactList = () => {
       px={["0.25rem", "0.5rem0", "1rem", "2rem"]}
       border="1px solid lightgrey"
       borderRadius="lg"
-      w={["100%", "85%", "75%"]}
+      w={["100%", "95%", "75%"]}
       mx="auto"
     >
       <Table w="100%" zIndex="2">

@@ -10,7 +10,7 @@ import { SearchIcon } from "@chakra-ui/icons";
 const Header = () => {
   return (
     <Box
-      w={["100%", "85%", "75%"]}
+      w={["100%", "95%", "75%"]}
       mb="15px"
       mx="auto"
       display="flex"
