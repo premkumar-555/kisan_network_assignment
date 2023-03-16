@@ -1,14 +1,16 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Box, Text, Button } from "@chakra-ui/react";
+import { Link, useLocation } from "react-router-dom";
 const ContactInfo = () => {
   const { selectedContact } = useSelector((state) => state);
+  const { state } = useLocation();
   console.log(selectedContact);
   return (
     <Box
       boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
       display="flex"
-      justifyContect="center"
+      justifyContent="center"
       flexDir="column"
       alignItems="center"
       borderRadius="lg"
@@ -33,7 +35,7 @@ const ContactInfo = () => {
         display="flex"
         border="1px solid none"
         mb="1rem"
-        justifyContect="space-evenly"
+        justifyContent="space-evenly"
         alignItems="center"
       >
         <Text
@@ -47,14 +49,14 @@ const ContactInfo = () => {
           Name &nbsp;:
         </Text>
         <Text fontWeight="500" w={["75%", "50%"]} fontSize={["md", "lg"]}>
-          &nbsp; {`${selectedContact?.first_name}${selectedContact?.last_name}`}
+          &nbsp; {`${state?.first_name}${state?.last_name}`}
         </Text>
       </Box>
       <Box
         w="100%"
         display="flex"
         border="1px solid none"
-        justifyContect="space-evenly"
+        justifyContent="space-evenly"
         alignItems="center"
         mb="2.5rem"
       >
@@ -68,11 +70,14 @@ const ContactInfo = () => {
           Phone Number &nbsp;:
         </Text>
         <Text fontWeight="500" w="50%" fontSize={["md", "lg"]}>
-          &nbsp; {`${selectedContact?.phone_number}`}
+          &nbsp; {`${state?.phone_number}`}
         </Text>
       </Box>
       <Button borderRadius="lg" colorScheme="orange" size={["md", "md"]}>
-        Send Message
+        <Link to={"/new-message/"} state={state}>
+          {" "}
+          Send Message
+        </Link>
       </Button>
     </Box>
   );

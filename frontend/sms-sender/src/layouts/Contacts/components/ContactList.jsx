@@ -77,7 +77,7 @@ const ContactList = () => {
                 sx={{ "&:hover": { cursor: "pointer" } }}
                 onClick={() => {
                   dispatch(selectUser(ele));
-                  navigate(`contact-info/${ele?._id}`);
+                  navigate(`contact-info/${ele?._id}`, { state: { ...ele } });
                 }}
                 key={uuid()}
                 fontSize={["sm", "md"]}
